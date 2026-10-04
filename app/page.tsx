@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
 import Nav from "@/components/Nav";
+import HeroSlides from "@/components/HeroSlides";
 import ScrollEffects from "@/components/ScrollEffects";
 import IndustryIcon from "@/components/IndustryIcon";
 import { HeroWaves, ContactWaves } from "@/components/Waves";
@@ -22,37 +23,43 @@ export default function Home() {
         {/* HERO */}
         <section className="hero">
           <div className="container hero__inner">
-            <p className="eyebrow load" style={delay("--d", 0)}>
-              Industrial supply · Bengaluru, India
-            </p>
-            <h1 className="hero__title">
-              <span className="line">
-                <span className="load" style={delay("--d", 1)}>Industrial &amp;</span>
-              </span>
-              <span className="line">
-                <span className="load" style={delay("--d", 2)}>Engineering</span>
-              </span>
-              <span className="line">
-                <span className="load" style={delay("--d", 3)}>
-                  Supply <span className="grad">Partner.</span>
+            <div className="hero__copy">
+              <p className="eyebrow load" style={delay("--d", 0)}>
+                Industrial supply · Bengaluru, India
+              </p>
+              <h1 className="hero__title">
+                <span className="line">
+                  <span className="load" style={delay("--d", 1)}>
+                    Industrial &amp;
+                  </span>
                 </span>
-              </span>
-            </h1>
-            <p className="hero__lead load" style={delay("--d", 4)}>
-              Comprehensive product distribution for HVAC, Oil &amp; Gas, Metals &amp; Mining, Water, and
-              Infrastructure projects.
-            </p>
-            <div className="hero__cta load" style={delay("--d", 5)}>
-              <a href="#contact" className="btn">
-                Send an Inquiry <span aria-hidden="true">→</span>
-              </a>
-              <a href="#products" className="btn btn--ghost">
-                Explore Products
-              </a>
+                <span className="line">
+                  <span className="load" style={delay("--d", 2)}>
+                    Engineering
+                  </span>
+                </span>
+                <span className="line">
+                  <span className="load" style={delay("--d", 3)}>
+                    Supply <span className="grad">Partner.</span>
+                  </span>
+                </span>
+              </h1>
+              <p className="hero__lead load" style={delay("--d", 4)}>
+                Comprehensive product distribution for HVAC, Oil &amp; Gas, Metals &amp; Mining, Water, and
+                Infrastructure projects.
+              </p>
+              <div className="hero__cta load" style={delay("--d", 5)}>
+                <a href="#contact" className="btn">
+                  Send an Inquiry <span aria-hidden="true">→</span>
+                </a>
+                <a href="#products" className="btn btn--ghost">
+                  Explore Products
+                </a>
+              </div>
             </div>
+            <HeroSlides />
           </div>
 
-          <Image src={logoMark} alt="" className="hero__mark load" style={delay("--d", 3)} priority aria-hidden="true" />
           <HeroWaves />
           <a href="#about" className="scroll-cue" aria-label="Scroll down">
             <span />
